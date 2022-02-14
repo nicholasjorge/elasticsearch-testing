@@ -22,6 +22,7 @@
     <spring-cloud.version>2021.0.0</spring-cloud.version>
     <testcontainers.version>1.16.3</testcontainers.version>
     <playtika-testcontainers.version>2.0.20</playtika-testcontainers.version>
+    <elasticsearch-java-client.version>7.16.3</elasticsearch-java-client.version>
   </properties>
 
   <dependencies>
@@ -36,7 +37,7 @@
     <dependency>
       <groupId>co.elastic.clients</groupId>
       <artifactId>elasticsearch-java</artifactId>
-      <version>7.16.3</version>
+      <version>${elasticsearch-java-client.version}</version>
     </dependency>
 
     <dependency>
@@ -106,6 +107,19 @@
             </exclude>
           </excludes>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <version>3.0.0-M5</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>integration-test</goal>
+              <goal>verify</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>

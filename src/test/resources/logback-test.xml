@@ -11,4 +11,7 @@
 
   <logger name="org.testcontainers" level="INFO"/>
   <logger name="com.github.dockerjava" level="WARN"/>
+  <!--  elasticsearch-->
+  <logger name="org.elasticsearch.client" level="DEBUG"/>
+  <logger name="co.elastic.clients.elasticsearch" level="DEBUG"/>
 </configuration>
