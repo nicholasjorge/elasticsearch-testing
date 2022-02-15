@@ -1,3 +1,7 @@
 spring:
   elasticsearch:
     uris: ${embedded.elasticsearch.host}:${embedded.elasticsearch.httpPort}
+#    uris: http://${embedded.elasticsearch.host}:${embedded.elasticsearch.httpPort}
+elasticsearch:
+  host: ${embedded.elasticsearch.host}
+  port: ${embedded.elasticsearch.httpPort}
